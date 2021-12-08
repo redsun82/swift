@@ -72,7 +72,7 @@ set(_SWIFT_DEFINED_COMPONENTS
 # for the following exceptions.
 set(_SWIFT_DEFAULT_COMPONENTS "${_SWIFT_DEFINED_COMPONENTS}")
 # 'dev' takes up a lot of disk space and isn't part of a normal toolchain.
-list(REMOVE_ITEM _SWIFT_DEFAULT_COMPONENTS "dev")
+#list(REMOVE_ITEM _SWIFT_DEFAULT_COMPONENTS "dev")
 # These clang header options conflict with 'clang-builtin-headers'.
 list(REMOVE_ITEM _SWIFT_DEFAULT_COMPONENTS "clang-resource-dir-symlink")
 list(REMOVE_ITEM _SWIFT_DEFAULT_COMPONENTS "clang-builtin-headers-in-clang-resource-dir")

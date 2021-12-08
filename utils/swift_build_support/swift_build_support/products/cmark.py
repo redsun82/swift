@@ -14,6 +14,11 @@ from . import product
 
 
 class CMark(product.Product):
+    def __init__(self, args, toolchain, source_dir, build_dir):
+        product.Product.__init__(self, args, toolchain, source_dir,
+                                 build_dir)
+        self.cmake_options.define('CMAKE_INSTALL_PREFIX:STRING', self.args.install_prefix)
+
     @classmethod
     def is_build_script_impl_product(cls):
         """is_build_script_impl_product -> bool
